@@ -31,6 +31,9 @@ fetch('https://api.dictionaryapi.dev/api/v2/entries/en_US/example')
             
             var meanings = '<hr class="my-4">'
             var synonyms = []
+
+            var meanings = '<hr class="my-4">'
+            var synonyms = []
             meaningsArr.forEach(meaning => {
                 meanings += `<h5 id="parts-of-speach">${meaning.partOfSpeech}:</h5><div class="definaton ml-5">
                 <p id="definition"><span class="text-info">Definition: &nbsp;</span>${meaning.definitions[0].definition}</p>

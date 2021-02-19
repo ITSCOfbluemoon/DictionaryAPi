@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,91 +11,85 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
     <link rel="shortcut icon" href="./asset/images/logo.png" type="image/x-icon">
 </head>
-
 <body>
-    <!-- navigation bar of bootstrap default -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a class="navbar-brand" href="#">Hidden brand</a>
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <a class="navbar-brand" href="#">Merrit Dictionary</a>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
 
+    </ul>
 
+    <ul style="list-style-type: none;">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle btn btn-sucess" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="text-decoration: none; color: aliceblue; list-style: none;">
+          Previously searced words
+        </a>
+        <div id="dropDownMenu" class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          
+      </li>
+    </ul>
+  </div>
+</nav>
 
-                    <!-- sign up button is added -->
-            </ul>
-            <button class="btn btn-primary">Sin up</button>
-        </div>
-    </nav>
-
-    <div class="search-box col-md-5">
-        <form action="" method="get">
+<div class="search-box col-md-5">               
+        <form action="" method="">
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <button class="btn btn-light dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All</button>
+                    <button id="togglerLanguage" class="btn btn-light dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">English</button>
                     <div class="dropdown-menu">
-                        <!-- drop down down menu is created -->
-                        <a class="dropdown-item" href="#">Category One</a>
-                        <a class="dropdown-item" href="#">Category Two</a>
-                        <a class="dropdown-item" href="#">Category Three</a>
-                        <div role="separator" class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Separated Category</a>
+                      <button class="dropdown-item" id="english">English</button>
+                      <button class="dropdown-item" id="arabic">Arabic</button>
+                      <button class="dropdown-item" id="spanish">Spanish</button>
+                      <button class="dropdown-item" id="japanese">Japanese</button>
+                      <button class="dropdown-item" id="hindi">Hindi</button>                      
                     </div>
                 </div>
-                <input type="text" class="form-control" aria-label="Search input with dropdown button" placeholder="search word here">
+                <input id="wordToBeSearched" type="text" class="form-control" placeholder="search word here" name="wordToBeSearched">
                 <div class="input-group-append">
-                    <!-- search box and display window are created -->
-                    <button class="btn btn-success" type="button">Search</button>
+                    <button id="searchButton" class="btn btn-success" type="button">Search</button>
                 </div>
             </div>
         </form>
     </div>
 
-    <div class="card" style="max-width: 800px; margin: 0 auto; padding: 30px;">
-        <h1 class="text-primary">
-            <span id="word"></span>
-            <span class="lead text-dark" id="phoneticsLetter"></span>
-            <span class="audio"><audio controls>
-        <source id="phoneticsSound" src="" type="audio/ogg">
-        Your browser does not support the audio element.
-        </audio></span>
-        </h1>
-        <div id="meaningsDisplalyer">
+    <div id="card" class="card" style="max-width: 800px; margin: 0 auto; padding: 30px;">
+      <h1 class="text-primary">
+        <span id="word"></span>  
+        <span class="lead text-dark" id="phoneticsLetter"></span> 
+        <span class="audio" id="audio"></span>
+    </h1>
+    <div id="meaningsDisplalyer">
 
-        </div>
-        <!-- <hr class="my-4"> -->
+    </div>
+    <!-- <hr class="my-4"> -->
+  </div>
+
+<!-- word of the day -->
+
+
+    <div class="card" style="max-width: 800px; margin: 0 auto; padding: 30px;">
+      <h1 class="display-4 text-center">Word of the day</h1>
+      <h1 class="text-primary">
+        <span id="randomWord"></span>  
+        <span class="lead text-dark" id="randomphoneticsLetter"></span> 
+        <span class="audio" id="randomaudio"></span>
+    </h1>
+      <div id="randomDisplayer">
+
+      </div>
     </div>
 
     <!-- word of the day -->
-
-
-    <!-- <div class="card" style="max-width: 800px; margin: 0 auto; padding: 30px;">
-      <h1 class="display-4 text-center">Word of the day</h1>
-      <h1 class="text-primary">
-        <span>hope</span>  
-        <span class="lead text-dark">[ he-loh, huh-, hel-oh ]</span> 
-        <span class="audio"><audio controls>
-        <source src="https://lex-audio.useremarkable.com/mp3/example_us_3.mp3" type="audio/ogg">
-        Your browser does not support the audio element.
-        </audio></span>
-    </h1>
-    <hr class="my-4">
-    <h5 id="parts-of-speach">Noun:</h5>
-    <div class="definaton ml-5">
-      <p id="definition"><span class="text-info">Definition: &nbsp;</span> Used as a greeting or to begin a phone conversation.</p>
-      <p id="example"><span class="text-info">Example: &nbsp;</span> hello there, Katie!</p>
-      <p id="synonames"><span class="text-info">Synonames: &nbsp;</span></p>
-      <ul class="synonames">
-        <li>world</li>
-        <li>hello</li>
-        <li>Python</li>
-        <li>java</li>
-      </ul>
-    </div> -->
 
     </div>
     <!-- footer -->
@@ -158,18 +151,17 @@
         </div>
       </div>
     </footer> -->
-    <!-- front end of dictionary is done -->
+    
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
-
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script> -->
+   
     <script src="./asset/js/jquery-3.5.1.js"></script>
     <script src="./asset/js/popper.min.js"></script>
     <script src="./asset/js/bootstrap.js"></script>
     <script src="./asset/js/app.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+  <script>
+    AOS.init();
+  </script>
 </body>
-
 </html>
