@@ -84,6 +84,8 @@ meaningsArr.forEach(meaning => {
                     synonyms.push(meaning.definitions[0].synonyms)
                 }
                 
+                
+                
                 var meanings = '<hr class="my-4">'
                         var synonyms = []
                         meaningsArr.forEach(meaning => {
