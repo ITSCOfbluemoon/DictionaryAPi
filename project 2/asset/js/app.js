@@ -1,12 +1,27 @@
 
 
-fetch('https://api.dictionaryapi.dev/api/v2/entries/en_US/example')
-        .then(function(res) {
-            return res.json(); //return the JSON Promise
-        }).then(function(response) {
-
-			console.log(response);
-
+var meanings = '<hr class="my-4">'
+var synonyms = []
+meaningsArr.forEach(meaning => {
+    meanings += `<h5 id="parts-of-speach">${meaning.partOfSpeech}:</h5><div class="definaton ml-5">
+    <p id="definition"><span class="text-info">Definition: &nbsp;</span>${meaning.definitions[0].definition}</p>
+    <p id="example"><span class="text-info">Example: &nbsp;</span>${meaning.definitions[0].example}</p>
+    </div>`
+    if (meaning.definitions[0].synonyms) {
+        synonyms.push(meaning.definitions[0].synonyms)
+    }
+    
+    var meanings = '<hr class="my-4">'
+            var synonyms = []
+            meaningsArr.forEach(meaning => {
+                meanings += `<h5 id="parts-of-speach">${meaning.partOfSpeech}:</h5><div class="definaton ml-5">
+                <p id="definition"><span class="text-info">Definition: &nbsp;</span>${meaning.definitions[0].definition}</p>
+                <p id="example"><span class="text-info">Example: &nbsp;</span>${meaning.definitions[0].example}</p>
+                </div>`
+                if (meaning.definitions[0].synonyms) {
+                    synonyms.push(meaning.definitions[0].synonyms)
+                }
+                
 
 
 
