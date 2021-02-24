@@ -1,4 +1,4 @@
-
+//  app.js
 var searchButton = document.getElementById("searchButton")
 var language = "en_US"
 var togglerLanguage = document.getElementById("togglerLanguage");
