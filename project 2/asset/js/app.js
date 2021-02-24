@@ -11,6 +11,7 @@ document.getElementById("wordToBeSearched").addEventListener("keypress", functio
 })
 
 
+// 
 
 var english = document.getElementById("english");
 english.addEventListener("click", function(e) {
@@ -80,7 +81,6 @@ searchButton.addEventListener("click", function (e) {
             phoneticsLetter.innerHTML = `${phoneticsArr[0].text}`
 
             // var phoneticsSound = document.getElementById('phoneticsSound');
-            // phoneticsSound.setAttribute('src', phoneticsArr[0].audio);
             
             var meaningsDisplalyer = document.getElementById("meaningsDisplalyer");
             
